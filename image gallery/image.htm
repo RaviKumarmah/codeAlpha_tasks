@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./image.css">
+ </head>
+ <body> 
+    <div class="view">
+        <img src="./img1.jpg" alt="">
+        <span>X</span>
+    </div>
+
+    <div class="container">
+        <img src="./jessica-irani-nEUzxCIB7vE-unsplash.jpg"></img>
+        <img src="./designer-walead-koafRfl_X78-unsplash.jpg" alt="">
+        <img src="../image gallery/designer-walead-nDs5cICnWzE-unsplash.jpg" alt="">
+        <img src="../image gallery/evelyn-semenyuk-68N8ooDKrDU-unsplash.jpg" alt="">
+        <img src="../image gallery/img1.jpg" alt="">
+       
+    </div>
+    <!-- <script src="./image.js"></script> -->
+ </body>
+ <script>
+    let images=document.querySelectorAll(".container img");
+    let viewimage=document.querySelector(".view ");
+    let fullimage=document.querySelector(".view img")
+    let closebtn=document.querySelector(".view span")
+
+    for(let image of images){
+        image.addEventListener("click",function(e){
+               viewimage.style.display="flex";
+               fullimage.src=e.target.src;
+        })
+    }
+    closebtn.addEventListener("click",function(){
+        viewimage.style.display="none";
+    })
+ </script>
+ </html>
